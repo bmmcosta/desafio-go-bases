@@ -1,21 +1,22 @@
 package main
 
 import (
+	"DESAFIO-GO-BASES/internal/read"
+	"DESAFIO-GO-BASES/internal/tickets"
 	"fmt"
-
-	"github.com/bootcamp-go/desafio-go-bases/internal/read"
-	"github.com/bootcamp-go/desafio-go-bases/internal/tickets"
 )
 
 func main() {
-	// read file and store in variable records
+	// read file and store it in a variable
+
 	records, err := getRecords()
 	if err != nil {
 		return
 	}
 
-	// format records to tickets
-	GetTickets, err := tickets.GetTickets(records) //send records to getTickets function and store in variable tickets
+	// format records to tickets as type ticket
+	//send records to getTickets function and store in variable GetTickets
+	GetTickets, err := tickets.GetTickets(records)
 	if err != nil {
 		return
 	}
